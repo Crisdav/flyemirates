@@ -7,6 +7,10 @@
     <th>Nombre</th>
     <th>ciudad</th>
     <th>pais</th>
+    <th>coord_x</th>
+    <th>coord_y</th>
+    <th>siglas</th>
+    <th>tipo</th>
     <th>Acciones</th>
     </tr>
     </thead>
@@ -14,7 +18,11 @@
     <tr *ngFor="let p of listado">
     <td>{{p.nombre}}</td>
     <td>{{p.ciudad}}</td>
-    <td>{{p.pais}}</td>
+    <td>{{p.coord_x}}</td>
+    <td>{{p.coord_y}}</td>
+    <td>{{p.siglas}}</td>
+    <td>{{p.tipo}}</td>
+    <td>{{p.tipo}}</td>
     <td>
     <a routerLink="/aeropuertos/edit/{{p.id}}" class="btn">Editar</a>
     <button class="btn red" (click)="delete(p.id)">Eliminar</button>

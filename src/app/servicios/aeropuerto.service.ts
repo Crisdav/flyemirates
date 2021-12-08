@@ -19,7 +19,11 @@ export class AeropuertoService {
       return this.http.post<AeropuertoModelo>(`${this.url}/aeropuertos`, {
       nombre: aeropuerto.nombre,
       ciudad: aeropuerto.ciudad,
-      pais: aeropuerto.pais
+      pais: aeropuerto.pais,
+      coord_x: aeropuerto.coord_x,
+      coord_y: aeropuerto.coord_y,
+      siglas: aeropuerto.siglas,
+      tipo: aeropuerto.tipo
       });
       } 
       getAll(): Observable<AeropuertoModelo[]>{
@@ -33,7 +37,11 @@ export class AeropuertoService {
           return this.http.patch<AeropuertoModelo>(`${this.url}/aeropuertos/${aeropuerto.id}`, {
           nombre: aeropuerto.nombre,
           ciudad: aeropuerto.ciudad,
-          pais: aeropuerto.pais
+          pais: aeropuerto.pais,
+          coord_x: aeropuerto.coord_x,
+          coord_y: aeropuerto.coord_y,
+          siglas: aeropuerto.siglas,
+          tipo: aeropuerto.tipo
           }, {
           headers: new HttpHeaders({
           "Authorization": `Bearer ${this.token}`
